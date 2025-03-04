@@ -7,11 +7,14 @@ stuff = []
 for key in cities:
     key = {}
     print()
-    key['country'] = input("What country is this city in? ").strip().title
-    key['population'] = int(input("What is the population of this city? "))
-    key['funfact'] = input("What is a fun fact about the city?" ).strip().title()
+    key['Country'] = input("What country is this city in? ").strip().title()
+    key['Population'] = int(input("What is the population of this city? "))
+    key['Fun fact'] = input("What is a fun fact about the city? ").strip().title()
     stuff.append(key)
 # The keys for each city's dictionary should be something like "country, population, and fact". Print the name of each city and all of the information you have stored about it. 
 # Make sure the final output is nicely formatted and neat
 
-print(stuff)
+for key in stuff:
+    print()
+    for item, value in key.items():
+        print(f"{item}: {value}")
